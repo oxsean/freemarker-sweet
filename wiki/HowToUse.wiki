@@ -32,3 +32,5 @@ then you can access parent macro context use parent variable
 or set a param use:
 
 <@param name="parent.name" value="ozn"/>
+
+see testCase code for more info
