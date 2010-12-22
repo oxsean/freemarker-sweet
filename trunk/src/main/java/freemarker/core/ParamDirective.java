@@ -1,8 +1,8 @@
 package freemarker.core;
 
 import freemarker.log.Logger;
-import org.oznyang.freemarker.sweet.*;
 import freemarker.template.*;
+import org.oznyang.freemarker.sweet.*;
 
 import java.io.IOException;
 import java.io.StringReader;
@@ -29,7 +29,22 @@ public class ParamDirective implements TemplateDirectiveModel {
     private static final ConcurrentMap<String, Expression> expsCache = new ConcurrentHashMap<String, Expression>();
 
     public enum Action {
-        add, addAll, set, remove, clear
+        /**
+         * 添加
+         */
+        add,
+        /**
+         * 添加所有
+         */addAll,
+        /**
+         * 修改
+         */set,
+        /**
+         * 删除
+         */remove,
+        /**
+         * 清除所有
+         */clear
     }
 
     private static final Logger logger = Logger.getLogger(ParamDirective.class.getName());
