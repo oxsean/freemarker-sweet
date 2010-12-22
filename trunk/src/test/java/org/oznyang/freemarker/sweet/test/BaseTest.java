@@ -8,6 +8,7 @@ import freemarker.template.Template;
 import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Before;
+import org.oznyang.freemarker.sweet.DirectiveHelper;
 
 import java.io.StringWriter;
 import java.util.Map;
@@ -27,8 +28,7 @@ public abstract class BaseTest extends TestCase {
     public void setUp() {
         cfg = new Configuration();
         cfg.setTemplateLoader(new ClassTemplateLoader(getClass(), "tpl"));
-        cfg.setSharedVariable("param", new ParamDirective());
-        cfg.setSharedVariable("expose", new ExposeDirective());
+        DirectiveHelper.init(cfg);
     }
 
     protected String getResult(Template tpl, Map root) throws Exception {
