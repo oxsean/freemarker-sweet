@@ -1,0 +1,8 @@
+Some extend for freemarker,make freemarker more powerful
+
+* Add some usefull feature for freemarker
+* Macro nest support
+* TemplateModel modify
+* Set param in macro body
+* Template extend support
+* Access strut2 freemarker configuration in spring
