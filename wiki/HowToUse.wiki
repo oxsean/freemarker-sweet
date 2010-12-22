@@ -1,5 +1,3 @@
-#how to use freemarker-sweet
-
 you need add two directive into freemarker sharedVariable,liks this:
 {{{
     public static void init(Configuration cfg) {
